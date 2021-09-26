@@ -22,7 +22,7 @@ The results of the t-test to test if the PSI mean for Lot3 is statistically diff
 
 ## Study Design: MechaCar vs. Competition
 
-Consumers are interested in several key metrics such as: budget, fuel economy, features, safety ratings, size, and horsepower. As a consumer that recently began looking for a new car, I am assuming that MechaCar is intended as a family vehicle. I would choose: fuel efficiency and safety as the top two factors in determining a "top" vehicle choice.
+Consumers are interested in several key metrics such as: budget, fuel eficiency, safety ratings, size, and horsepower (gotta climb the mountains). As a consumer that recently began looking for a new car, I am assuming that MechaCar is intended as a family vehicle. I would choose: fuel efficiency and safety as the top two factors in determining a preference.
 
 First, we need to gather data on the MechaCar and its competitors in the following categories:Fuel efficiency and Safety Rating. I would use a two-sample t-test to determine if there is a statistical difference between the two.
 
