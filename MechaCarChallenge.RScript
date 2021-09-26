@@ -1,3 +1,5 @@
+#Linear Regression to Predict MPG#
+
 #Use the library() function to load the dplyr package.
 
 ?library
@@ -20,3 +22,27 @@ lm(formula = mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clea
 ?summary
 summary(lm(formula = mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data = d))
 
+#Create Visulatizations for the Trip Analysis#
+
+#In your MechaCarChallenge.RScript, import and read in the Suspension_Coil.csv file as a table.
+S<-read.csv("Data Analysis Bootcamp/Week 15/MechaCar_Statistical_Analysis/Suspension_Coil.csv")
+head(S)
+
+#Write an RScript that creates a total_summary dataframe using the summarize() function to get the mean, median, variance, and standard deviation of the suspension coil's PSI column.
+
+?summarize
+> total_summary <- S %>% summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), SD=sd(PSI), .groups = 'keep')
+
+#Write an RScript that creates a lot_summary dataframe using the group_by() and the summarize() functions to group each manufacturing lot by the mean, median, variance, and standard deviation of the suspension coil's PSI column.
+
+lot_summary <- S%>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), SD=sd(PSI), .groups = 'keep')
+head(lot_summary)
+
+#In your MechaCarChallenge.RScript, write an RScript using the t.test() function to determine if the PSI across all manufacturing lots is statistically different from the population mean of 1,500 pounds per square inch.
+t.test((S$PSI),mu=1500)
+
+#Next, write three more RScripts in your MechaCarChallenge.RScript using the t.test() function and its subset() argument to determine if the PSI for each manufacturing lot is statistically different from the population mean of 1,500 pounds per square inch.
+
+t.test((subset(S, Manufacturing_Lot == "Lot1")$PSI),mu=(1500))
+t.test((subset(S, Manufacturing_Lot == "Lot2")$PSI),mu=(1500))
+t.test((subset(S, Manufacturing_Lot == "Lot3")$PSI),mu=(1500))
