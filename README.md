@@ -12,10 +12,22 @@ Summary statistics, which include: the mean, median, variance, and standard devi
 ## T_Tests on Suspension Coils
 ![T-Tests](https://user-images.githubusercontent.com/85076259/134823672-ff237cf3-3357-48b6-a3cd-db84202e4a19.PNG)
 
-The results of the t-test to determine if the PSI across all manufacturing lots are statistically different from the population mean of 1,500 PSI, shows that at a 95% confidence level, the two means are not statistically different. The p-value of 0.06028 is higher than the critical value of 0.05 so the null hypothesis can be accepted since there is no difference between the means of the PSI for the population and overall manufactung lot sample.  The means within the 95% confidence range are between 1497.5 and 1500 PSI. 
+The results of the t-test to determine if the PSI across all manufacturing lots are statistically different from the population mean of 1,500 PSI, shows that at a 95% confidence level, the two means are not statistically different. The p-value of 0.06 is higher than the critical value of 0.05 so the null hypothesis can be accepted since there is no difference between the means of the PSI for the population and overall manufactung lot sample.  The means within the 95% confidence range are between 1497.5 and 1500 PSI. 
 
 The results of the t-test to test if the PSI mean for Lot1 is statistically different from the population mean of 1,500 PSI show that at a 95% confidence level the two means are not statistically different. The p-value of 1 shows that the mean for Lot1 is exactly the same as the population mean of 1500 PSI. 
 
-The results of the t-test to test if the PSI mean for Lot2 is statistically different from the population mean of 1,500PSI show that at a 95% confidence level the two means are not statistically different. Because the p-value of 0.6072 is higher than the critical value of 0.05 the null hypothesis can be accepted since there is no difference between the means of the PSI for the population and Lot2. The means within the 95% confidence range are between 1499.423 and 1500.977 PSI.
+The results of the t-test to test if the PSI mean for Lot2 is statistically different from the population mean of 1,500PSI show that at a 95% confidence level the two means are not statistically different. Because the p-value of 0.61 is higher than the critical value of 0.05 the null hypothesis can be accepted since there is no difference between the means of the PSI for the population and Lot2. The means within the 95% confidence range are between 1499.42 and 1500.97 PSI.
 
-The results of the t-test to test if the PSI mean for Lot3 is statistically different from the population mean of 1,500 PSI show that at a 95% confidence level the two means are statistically different. Because the p-value of 0.04168 is lower than the critical value of 0.05 the null hypothesis should be rejected since there is a difference between the means of the PSI for the population and Lot3 and the true mean is not equal to 1500. The means within the 95% confidence range are between 1492.431 and 1499.849 PSI.
+The results of the t-test to test if the PSI mean for Lot3 is statistically different from the population mean of 1,500 PSI show that at a 95% confidence level the two means are statistically different. Because the p-value of 0.04 is lower than the critical value of 0.05 the null hypothesis should be rejected since there is a difference between the means of the PSI for the population and Lot3 and the true mean is not equal to 1500. The means within the 95% confidence range are between 1492.43 and 1499.85 PSI.
+
+## Study Design: MechaCar vs. Competition
+
+Consumers are interested in several key metrics such as: budget, fuel economy, features, safety ratings, size, and horsepower. As a consumer that recently began looking for a new car, I am assuming that MechaCar is intended as a family vehicle. I would choose: fuel efficiency and safety as the top two factors in determining a "top" vehicle choice.
+
+First, we need to gather data on the MechaCar and its competitors in the following categories:Fuel efficiency and Safety Rating. I would use a two-sample t-test to determine if there is a statistical difference between the two.
+
+  H1 = There is no statistical difference between the MechaCar and it's competitor.
+
+  H2 = There is a statistical difference between the MechaCar and it's competitor.
+
+I would also choose the standard p = 0.05 as my tolerance level to accept or reject the null hypothesis.
